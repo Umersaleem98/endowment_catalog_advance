@@ -11,7 +11,6 @@
         .justified-content {
             text-align: justify;
         }
-        
     </style>
 </head>
 <body>
