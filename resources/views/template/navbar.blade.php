@@ -45,7 +45,7 @@
                 <a class="nav-link" href="{{ url('signrature_program') }}">Signature Programs</a>
             </li>
             <li class="nav-item {{ Request::is('nust_trust_foundation') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('nust_trust_foundation') }}">Nust Trust Foundation</a>
+                <a class="nav-link" href="{{ url('nust_trust_foundation') }}">Nust Trust Fund</a>
             </li>
             <li class="nav-item {{ Request::is('r_m_o') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('r_m_o') }}">Resource Mobilization Officers</a>

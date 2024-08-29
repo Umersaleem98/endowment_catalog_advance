@@ -46,12 +46,12 @@
                 <div class="col-md-4">
                     <h2>Zakat Donation</h2>
                     <p>Account Number: 2292-79173861-03</p>
-                    <p>IBAN Number: PK34habb0022927917386103</p>                                    </div>
+                    <p>IBAN Number: PK34HABB0022927917386103</p>                                    </div>
                 <div class="col-md-4">
                     <h2>Endowment Fund Donations</h2>
                     {{-- <p>Bank Name: ABC Bank</p> --}}
                     <p>Account Number: 2292-79173811-01</p>
-                    <p>IBAN Number: PK64habb0022927917381101</p>                                    </div>
+                    <p>IBAN Number: PK64HABB0022927917381101</p>                                    </div>
             </div>
         </div>
     </div>

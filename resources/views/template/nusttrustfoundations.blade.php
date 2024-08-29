@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Us</title>
+<title>Nust Trust Foundation</title>
     @include('template.head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -31,28 +31,26 @@
         <div class="container">
             <div class="row">
                 <!-- Left Section for Images -->
-                <div class="col-lg-5 col-md-4 col-sm-12 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 mb-lg-0">
                     <div class="image-container">
-                        <img src="{{ asset('templates/images/slider_background3.jpg') }}" alt="Image 1" class="img-fluid" style="border-radius: 5%; height:240px;">
+                        <img src="{{ asset('templates/images/tahaqureshi.jpg') }}" alt="Image 1" class="img-fluid" style="border-radius: 5%; width: 100%; height:340px;">
                     </div>
                 </div>
                 <!-- Right Section for Content -->
-                <div class="col-lg-7 col-md-8 col-sm-12 p-3">
+                <div class="col-lg-8 col-md-8 col-sm-12 p-3">
                     <div class="content-container">
-                        <h2>NUST OPENS FIRST NTF ACCOUNT IN UK</h2>
+                        <h2>NUST OPENS FIRST NTF ACCOUNT IN THE UK</h2>
                         <p class="justified-content" class="justified-content">
-                        NUST has opened its first international NUST Trust Foundation Office in the UK. The announcement was made during the official inauguration ceremony held in London by Mr Toaha Qureshi MBE, who is a long-term friend of NUST and as well a trustee of the NUST Trust Foundation, and Chairman of FIRD, and Rector NUST Engr Javed Mahmood Bukhari.
+                        In June 2012, National University of Sciences & Technology (NUST) established the NUST Trust Fund (NTF) at the university’s main campus. NTF is an independent Trust, constituted under a Trust Deed dated June 1, 2012, and is a registered Trust (number 1289), under the Trust Act 1882. 
                         </p>
                         <p class="justified-content">
-                        Among other notables were Pro-Rector Research Innovation & Commercialisation (RIC) Dr Rizwan Riaz and various business community members. Mr Syed Aoun Ali Bukhari was present as an alumni representative.
-                        This initiative will not only guarantee a smooth and effective transference of charitable contributions to Pakistan from abroad but will also facilitate building the international visibility of NUST.
+                        Toaha Qureshi MBE, the Chairman and Trustee of NUST Trust Fund UK, has been a part of the genesis of the Trust in 2018 and has been integral in its journey to becoming a charity registered in the UK. The charity focuses on relieving poverty by raising funds for disadvantaged students in Pakistan who need support in completing higher education and achieving their dreams. Toaha Qureshi MBE has a long history of supporting Pakistanis back home and abroad, both in education and poverty relief, having provided scholarships, disaster relief funds, and more. 
                         </p>
                         <p class="justified-content">
-                        University Advancement Office various prospective donors during their outreach visit last week and the establishment of this office promises a hassle-free gift point and a time-saving payment process for the prospective donors. It will also enable tax exemption to the donors, and bridge the gap between communities thus ensuring maximum contribution to not only student endowment, but also to other nation-building projects by NUST.
+                        The NUST Trust Fund UK was formally launched in 2022 by Toaha Qureshi MBE at a ceremony in London - attended by Lt. Gen. (R) Javed Mahmood Bukhari, Rector NUST, and Dr Rizwan Riaz, Pro-Rector NUST. Several fundraising events were held, and partnerships with British universities were pursued. The NTF UK will be working with alumni and leaders from the business, community, and charitable sectors to achieve its aims. 
                         </p>                        
                         <p class="justified-content">
-                        The office has been established under charity number 1187170 and is located in FIRD Secretariat, Floor 2, 43 45 Coldharbour Lane, London. On the occasion, Rector NUST expressed his great appreciation for the efforts of the NUST office back home and also to the Board of Trustees based in the UK who have extended their support in making this great endeavor of national significance happen.
-                        </p>
+                        The establishment of this office promises a hassle-free gift point and a time-saving payment process for the prospective donors. It will also enable tax exemption to the donors, and bridge the gap between communities, thus ensuring maximum contribution to not only student endowment but also other nation-building projects by NUST.</p>
                     </div>
                 </div>
             </div>
@@ -65,6 +63,43 @@
 
 </div>
 
+<div class="container">
+    <div class="row">
+    <div class="col-12 mb-4">
+    <div class="card">
+        <div class="card-header" style="background-color: #E7E8EA;">
+            <h2 class="text-dark text-center">Bank Details </h2>
+            <h3 class="text-center text-dark">
+            Account Title: NUST Trust Foundation, UK
+            </h3>
+        </div>
+        <div class="card-body mt-3">
+        
+        <div class="row g-3">
+            
+        <div class="col-md-4 p-2" style="background-color:#D1ECF1;">
+            <p class="text-dark mt-3">Account Number GBP: 70027591</p>
+            <p class="text-dark">IBAN GBP: GB07 HABB 6095 1170 0275 91</p>
+        </div>
+        <div class="col-md-4 p-2" style="background-color:#D1ECF1;">
+            <p class="text-dark mt-3">Account Number USD: 70027594</p>
+            <p class="text-dark">IBAN Number USD: GB 23 HABB 6095 1170 0275 94</p>
+        </div>
+        <div class="col-md-4 p-2" style="background-color:#D1ECF1;">
+            <p class="text-dark mt-3">Account Type: Savings Account</p>
+            <p class="text-dark">Branch: HBL Bank UK, 2 Swan Street, Manchester M4 5JN </p>
+            <p class="text-dark"> SWIFT/BIC: HABBGB2L</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
 <br>
 
 @include('template.footer')
