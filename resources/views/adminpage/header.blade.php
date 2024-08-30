@@ -16,7 +16,8 @@
                 <!-- User Account -->
                 <li class="dropdown user-menu">
                     <button class="dropdown-toggle nav-link btn btn-light" data-toggle="dropdown">
-                        <img src="admin/images/user/user-xs-01.jpg" class="user-image rounded-circle" alt="User Image" />
+                        <img src="admin/images/user/user-xs-01.jpg" class="user-image rounded-circle"
+                            alt="User Image" />
                         <span class="d-none d-lg-inline-block">{{ Auth::user()->name }}</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
@@ -24,7 +25,8 @@
                             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                            <a href="#" class="btn btn-light btn-sm btn-block" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a href="#" class="btn btn-light btn-sm btn-block"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
                         </li>

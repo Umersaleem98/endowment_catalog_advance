@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     @include('adminpage.css')
 
     <style>
-        body, table, th, td {
-            color: #000; /* Black color */
+        body,
+        table,
+        th,
+        td {
+            color: #000;
+            /* Black color */
         }
 
         .table-responsive {
@@ -14,9 +19,12 @@
         }
     </style>
 </head>
+
 <body class="navbar-fixed sidebar-fixed" id="body">
     <script>
-        NProgress.configure({ showSpinner: false });
+        NProgress.configure({
+            showSpinner: false
+        });
         NProgress.start();
     </script>
 
@@ -29,7 +37,8 @@
             <div class="content-wrapper">
                 <div class="content">
 
-                    <form action="{{ url('open_fundlist') }}" method="POST" enctype="multipart/form-data" class="mt-2">
+                    <form action="{{ url('open_fundlist') }}" method="POST" enctype="multipart/form-data"
+                        class="mt-2">
                         @csrf
                         <div class="form-group">
                             <label for="file">Upload Excel File:</label>
@@ -50,10 +59,12 @@
                                         <form id="multiDeleteForm" method="POST" action="{{ url('multidelete') }}">
                                             @csrf
                                             @method('DELETE')
-                                            <table id="productsTable" class="table table-hover table-product table-sm" style="width:100%">
+                                            <table id="productsTable" class="table table-hover table-product table-sm"
+                                                style="width:100%">
                                                 <thead>
                                                     <tr>
-                                                        <th><input type="checkbox" id="select-all"></th> <!-- Select all checkbox -->
+                                                        <th><input type="checkbox" id="select-all"></th>
+                                                        <!-- Select all checkbox -->
                                                         <th>Qalam ID</th>
                                                         <th>Student Name</th>
                                                         <th>Father Name</th>
@@ -77,37 +88,41 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach ($openfundsstudents as $item)
-                                                    <tr>
-                                                        <td><input type="checkbox" name="ids[]" value="{{ $item->id }}"></td>
-                                                        <td>{{ $item->qalam_id }}</td>
-                                                        <td>{{ $item->student_name }}</td>
-                                                        <td>{{ $item->father_name }}</td>
-                                                        <td>{{ $item->institutions }}</td>
-                                                        <td>{{ $item->discipline }}</td>
-                                                        <td>{{ $item->contact_no }}</td>
-                                                        <td>{{ $item->scholarship_name }}</td>
-                                                        <td>{{ $item->nust_trust_fund_donor_name }}</td>
-                                                        <td>{{ $item->province }}</td>
-                                                        <td>{{ $item->domicile }}</td>
-                                                        <td>{{ $item->gender }}</td>
-                                                        <td>{{ $item->program }}</td>
-                                                        <td>{{ $item->degree }}</td>
-                                                        <td>{{ $item->year_of_admission }}</td>
-                                                        <td>{{ $item->father_status }}</td>
-                                                        <td>{{ $item->father_profession }}</td>
-                                                        <td>{{ $item->monthly_income }}</td>
-                                                        <td>{{ $item->remarks }}</td>
-                                                        <td>
-                                                            @if ($item->images)
-                                                            <img src="{{ asset('students_images/' . $item->images) }}" alt="Student Image" style="max-width: 80px; max-height: 80px;">
-                                                            @else
-                                                            No Image Available
-                                                            @endif
-                                                        </td>
-                                                        <td>
-                                                            <a href="{{ url('openfundstudents_edit', $item->id) }}" class="btn btn-primary btn-sm">Update</a>
-                                                        </td>
-                                                    </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" name="ids[]"
+                                                                    value="{{ $item->id }}"></td>
+                                                            <td>{{ $item->qalam_id }}</td>
+                                                            <td>{{ $item->student_name }}</td>
+                                                            <td>{{ $item->father_name }}</td>
+                                                            <td>{{ $item->institutions }}</td>
+                                                            <td>{{ $item->discipline }}</td>
+                                                            <td>{{ $item->contact_no }}</td>
+                                                            <td>{{ $item->scholarship_name }}</td>
+                                                            <td>{{ $item->nust_trust_fund_donor_name }}</td>
+                                                            <td>{{ $item->province }}</td>
+                                                            <td>{{ $item->domicile }}</td>
+                                                            <td>{{ $item->gender }}</td>
+                                                            <td>{{ $item->program }}</td>
+                                                            <td>{{ $item->degree }}</td>
+                                                            <td>{{ $item->year_of_admission }}</td>
+                                                            <td>{{ $item->father_status }}</td>
+                                                            <td>{{ $item->father_profession }}</td>
+                                                            <td>{{ $item->monthly_income }}</td>
+                                                            <td>{{ $item->remarks }}</td>
+                                                            <td>
+                                                                @if ($item->images)
+                                                                    <img src="{{ asset('students_images/' . $item->images) }}"
+                                                                        alt="Student Image"
+                                                                        style="max-width: 80px; max-height: 80px;">
+                                                                @else
+                                                                    No Image Available
+                                                                @endif
+                                                            </td>
+                                                            <td>
+                                                                <a href="{{ url('openfundstudents_edit', $item->id) }}"
+                                                                    class="btn btn-primary btn-sm">Update</a>
+                                                            </td>
+                                                        </tr>
                                                     @endforeach
                                                 </tbody>
                                             </table>
@@ -130,6 +145,7 @@
 
     @include('adminpage.script')
 </body>
+
 </html>
 
 <script>
@@ -142,28 +158,27 @@
 </script>
 
 <script>
+    // If "Select All" is checked, submit the form with showAll set to true
+    if (this.checked) {
+        let form = document.createElement('form');
+        form.method = 'GET';
+        form.action = "{{ url('open_funds_students') }}";
 
-        // If "Select All" is checked, submit the form with showAll set to true
-        if (this.checked) {
-            let form = document.createElement('form');
-            form.method = 'GET';
-            form.action = "{{ url('open_funds_students') }}";
+        let input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'showAll';
+        input.value = 'true';
+        form.appendChild(input);
 
-            let input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'showAll';
-            input.value = 'true';
-            form.appendChild(input);
+        // Append the search query if exists
+        let queryInput = document.createElement('input');
+        queryInput.type = 'hidden';
+        queryInput.name = 'query';
+        queryInput.value = "{{ $searchQuery }}";
+        form.appendChild(queryInput);
 
-            // Append the search query if exists
-            let queryInput = document.createElement('input');
-            queryInput.type = 'hidden';
-            queryInput.name = 'query';
-            queryInput.value = "{{ $searchQuery }}";
-            form.appendChild(queryInput);
-
-            document.body.appendChild(form);
-            form.submit();
-        }
+        document.body.appendChild(form);
+        form.submit();
+    }
     });
 </script>

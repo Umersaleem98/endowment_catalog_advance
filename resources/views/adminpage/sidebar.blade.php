@@ -4,7 +4,8 @@
         <div class="app-brand">
             <a href="{{ url('dashboard') }}">
                 {{-- <img src="admin2/images/logo.png" alt="Mono" style="width: 30px; height: 30px;"> --}}
-                <img src="admin/images/logo.png" alt="Mono" style="width: 40px; height: 40px; filter: brightness(250%);">
+                <img src="admin/images/logo.png" alt="Mono"
+                    style="width: 40px; height: 40px; filter: brightness(250%);">
 
                 <span class="brand-name">catalog</span>
             </a>
@@ -22,7 +23,7 @@
 
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#users"
-                       aria-expanded="false" aria-controls="users">
+                        aria-expanded="false" aria-controls="users">
                         <i class="mdi mdi-account-group"></i>
                         <span class="nav-text">Students</span> <b class="caret"></b>
                     </a>
@@ -42,8 +43,8 @@
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#adoped_student"
-                       aria-expanded="false" aria-controls="adoped_student">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#adoped_student" aria-expanded="false" aria-controls="adoped_student">
                         <i class="mdi mdi-account-group"></i>
                         <span class="nav-text">Adoped Students</span> <b class="caret"></b>
                     </a>
@@ -60,8 +61,8 @@
                 </li>
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Giving_Avenues"
-                       aria-expanded="false" aria-controls="Giving_Avenues">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#Giving_Avenues" aria-expanded="false" aria-controls="Giving_Avenues">
                         <i class="mdi mdi-charity"></i>
                         <span class="nav-text">Giving Avenues</span> <b class="caret"></b>
                     </a>
@@ -92,8 +93,8 @@
                 </li>
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#FundaProject"
-                       aria-expanded="false" aria-controls="FundaProject">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#FundaProject" aria-expanded="false" aria-controls="FundaProject">
                         <i class="mdi mdi-currency-usd"></i>
                         <span class="nav-text">Fund a Project</span> <b class="caret"></b>
                     </a>
@@ -109,8 +110,8 @@
                 </li>
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#SupportScholor"
-                       aria-expanded="false" aria-controls="SupportScholor">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#SupportScholor" aria-expanded="false" aria-controls="SupportScholor">
                         <i class="mdi mdi-school"></i>
                         <span class="nav-text">Support Scholar</span> <b class="caret"></b>
                     </a>
@@ -131,8 +132,8 @@
                 </li>
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Team"
-                       aria-expanded="false" aria-controls="Team">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#Team" aria-expanded="false" aria-controls="Team">
                         <i class="mdi mdi-account-multiple"></i>
                         <span class="nav-text">Team</span> <b class="caret"></b>
                     </a>
@@ -154,8 +155,8 @@
 
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Users"
-                       aria-expanded="false" aria-controls="Users">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#Users" aria-expanded="false" aria-controls="Users">
                         <i class="mdi mdi-account"></i>
                         <span class="nav-text">Users</span> <b class="caret"></b>
                     </a>
@@ -176,8 +177,8 @@
                 </li>
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#Events"
-                       aria-expanded="false" aria-controls="Events">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#Events" aria-expanded="false" aria-controls="Events">
                         <i class="mdi mdi-calendar"></i>
                         <span class="nav-text">Events</span> <b class="caret"></b>
                     </a>

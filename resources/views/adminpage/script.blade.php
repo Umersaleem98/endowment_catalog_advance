@@ -10,21 +10,21 @@
 <script src="{{ asset('admin/plugins/daterangepicker/moment.min.js') }}"></script>
 <script src="{{ asset('admin/plugins/daterangepicker/daterangepicker.js') }}"></script>
 <script>
-  jQuery(document).ready(function() {
-    jQuery('input[name="dateRange"]').daterangepicker({
-      autoUpdateInput: false,
-      singleDatePicker: true,
-      locale: {
-        cancelLabel: 'Clear'
-      }
+    jQuery(document).ready(function() {
+        jQuery('input[name="dateRange"]').daterangepicker({
+            autoUpdateInput: false,
+            singleDatePicker: true,
+            locale: {
+                cancelLabel: 'Clear'
+            }
+        });
+        jQuery('input[name="dateRange"]').on('apply.daterangepicker', function(ev, picker) {
+            jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
+        });
+        jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function(ev, picker) {
+            jQuery(this).val('');
+        });
     });
-    jQuery('input[name="dateRange"]').on('apply.daterangepicker', function (ev, picker) {
-      jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
-    });
-    jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function (ev, picker) {
-      jQuery(this).val('');
-    });
-  });
 </script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="{{ asset('admin/plugins/toaster/toastr.min.js') }}"></script>

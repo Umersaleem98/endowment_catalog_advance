@@ -1,92 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <title>One Year</title>
-  <head>
+<title>One Year</title>
+
+<head>
 
 
- @include('adminpage.css')
+    @include('adminpage.css')
 
-<style>
-    body, table, th, td {
-    color: #000; /* Black color */
-}
-</style>
+    <style>
+        body,
+        table,
+        th,
+        td {
+            color: #000;
+            /* Black color */
+        }
+    </style>
 </head>
 
 
-  <body class="navbar-fixed sidebar-fixed" id="body">
+<body class="navbar-fixed sidebar-fixed" id="body">
     <script>
-      NProgress.configure({ showSpinner: false });
-      NProgress.start();
+        NProgress.configure({
+            showSpinner: false
+        });
+        NProgress.start();
     </script>
 
 
     <div id="toaster"></div>
     <div class="wrapper">
-      @include('adminpage.sidebar')
-      <div class="page-wrapper">
-        @include('adminpage.header')
+        @include('adminpage.sidebar')
+        <div class="page-wrapper">
+            @include('adminpage.header')
 
-        <div class="content-wrapper">
-            <div class="content">
+            <div class="content-wrapper">
+                <div class="content">
                     <!-- Top Statistics -->
-                  <!-- Table Product -->
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="card card-default">
-                        <div class="card-header">
-                          <h2>One Year Education list</h2>
+                    <!-- Table Product -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h2>One Year Education list</h2>
 
+                                </div>
+                                <div class="card-body">
+                                    <table id="productsTable" class="table table-hover table-product"
+                                        style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Program</th>
+                                                <th>Degree</th>
+                                                <th>Seats</th>
+                                                <th>Total Amount</th>
+                                                <th>Donor Name</th>
+                                                <th>Donor Email</th>
+                                                <th>Phone</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($oneyeareduction as $item)
+                                                <tr>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->program }}</td>
+                                                    <td>{{ $item->degree }}</td>
+                                                    <td>{{ $item->seats }}</td>
+                                                    <td>{{ $item->totalAmount }}</td>
+                                                    <td>{{ $item->donor_name }}</td>
+                                                    <td>{{ $item->donor_email }}</td>
+                                                    <td>{{ $item->phone }}</td>
+                                                    <td>{{ $item->payments_status }}</td>
+                                                </tr>
+                                            @endforeach
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                          <table id="productsTable" class="table table-hover table-product" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Program</th>
-                                    <th>Degree</th>
-                                    <th>Seats</th>
-                                    <th>Total Amount</th>
-                                    <th>Donor Name</th>
-                                    <th>Donor Email</th>
-                                    <th>Phone</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($oneyeareduction as $item)
-                                <tr>
-                                    <td>{{$item->id}}</td>
-                                    <td>{{$item->program}}</td>
-                                    <td>{{$item->degree}}</td>
-                                    <td>{{$item->seats}}</td>
-                                    <td>{{$item->totalAmount}}</td>
-                                    <td>{{$item->donor_name}}</td>
-                                    <td>{{$item->donor_email}}</td>
-                                    <td>{{$item->phone}}</td>
-                                    <td>{{$item->payments_status}}</td>
-                                </tr>
-                                @endforeach
-
-                            </tbody>
-                          </table>
-
-                        </div>
-                      </div>
                     </div>
-                  </div>
 
-          </div>
+                </div>
+
+            </div>
+
 
         </div>
-
-
-      </div>
     </div>
 
-                    <!-- Card Offcanvas -->
+    <!-- Card Offcanvas -->
 
 
-                    @include('adminpage.script')
-  </body>
+    @include('adminpage.script')
+</body>
+
 </html>

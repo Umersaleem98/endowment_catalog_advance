@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     @include('template.head')
     <style>
         body {
             background: #FFFFFF;
         }
+
         #preloader {
             position: fixed;
             top: 0;
@@ -24,6 +26,7 @@
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -36,15 +39,21 @@
 
         /* Increase preloader image size */
         .loader img {
-            height: 50vw; /* Adjust height as needed */
-            width: 50vw;  /* Adjust width as needed */
-            animation: slowBlink 1.5s infinite; /* Add animation for slow blinking */
+            height: 50vw;
+            /* Adjust height as needed */
+            width: 50vw;
+            /* Adjust width as needed */
+            animation: slowBlink 1.5s infinite;
+            /* Add animation for slow blinking */
         }
 
         @keyframes slowBlink {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.5;
             }
@@ -86,6 +95,7 @@
         }
     </style>
 </head>
+
 <body style="background-color: #FFFFFF;">
     <div id="preloader">
         <div class="loader">
@@ -97,7 +107,8 @@
         <!-- Header -->
         @include('template.navbar')
         @include('template.slider')
-        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+            class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a>
         {{-- @include('template.statistics') --}}
@@ -129,4 +140,5 @@
         });
     </script>
 </body>
+
 </html>

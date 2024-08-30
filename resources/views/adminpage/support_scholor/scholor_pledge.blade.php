@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <title>Support Scholar Pledge list</title>
 
     @include('adminpage.css')
 
     <style>
-        body, table, th, td {
-            color: #000; /* Black color */
+        body,
+        table,
+        th,
+        td {
+            color: #000;
+            /* Black color */
         }
     </style>
 </head>
 
 <body class="navbar-fixed sidebar-fixed" id="body">
     <script>
-        NProgress.configure({ showSpinner: false });
+        NProgress.configure({
+            showSpinner: false
+        });
         NProgress.start();
     </script>
 
@@ -25,11 +32,11 @@
             @include('adminpage.header')
 
             <div class="content-wrapper">
-                @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="content">
                     <!-- Top Statistics -->
                     <!-- Table Product -->
@@ -41,7 +48,8 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <table id="productsTable" class="table table-hover table-product" style="width:100%">
+                                    <table id="productsTable" class="table table-hover table-product"
+                                        style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
@@ -58,22 +66,25 @@
                                         <tbody>
                                             @foreach ($support_pledge as $item)
                                                 <tr>
-                                                    <td>{{$item->id}}</td>
-                                                    <td>{{$item->student_name}}</td>
-                                                    <td>{{$item->donor_name}}</td>
-                                                    <td>{{$item->donor_email}}</td>
-                                                    <td>{{$item->phone}}</td>
-                                                    <td>{{$item->donation_percent}} %</td>
-                                                    <td>{{$item->donation_for}}</td>
-                                                    <td>{{$item->pledge_approved ? 'Approved' : 'Pending'}}</td>
+                                                    <td>{{ $item->id }}</td>
+                                                    <td>{{ $item->student_name }}</td>
+                                                    <td>{{ $item->donor_name }}</td>
+                                                    <td>{{ $item->donor_email }}</td>
+                                                    <td>{{ $item->phone }}</td>
+                                                    <td>{{ $item->donation_percent }} %</td>
+                                                    <td>{{ $item->donation_for }}</td>
+                                                    <td>{{ $item->pledge_approved ? 'Approved' : 'Pending' }}</td>
                                                     <td>
                                                         @if (!$item->pledge_approved)
-                                                            <form action="{{ url('/pledge_approved', $item->id) }}" method="POST">
+                                                            <form action="{{ url('/pledge_approved', $item->id) }}"
+                                                                method="POST">
                                                                 @csrf
-                                                                <button type="submit" class="btn btn-info btn-sm">Approve</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-info btn-sm">Approve</button>
                                                             </form>
                                                         @else
-                                                            <button class="btn btn-success btn-sm" disabled>Approved</button>
+                                                            <button class="btn btn-success btn-sm"
+                                                                disabled>Approved</button>
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -91,4 +102,5 @@
 
     @include('adminpage.script')
 </body>
+
 </html>
